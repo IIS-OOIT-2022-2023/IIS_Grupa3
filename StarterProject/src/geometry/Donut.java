@@ -77,5 +77,11 @@ public class Donut extends Circle{
 		g.drawOval(getCenter().getX() - innerRadius, getCenter().getY() - innerRadius,
 				2*innerRadius, 2*innerRadius);   //nacrta unutrasnji krug
 	}
+	
+	public int compareTo(Object o) {
+		if (o instanceof Donut)
+			return (int) (this.area() - ((Donut) o).area());
+		return 0;
+	}
 
 }
